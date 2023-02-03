@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-1.7926268897349473" y="689.6522549441357">ch.coop.hocl1.weatherapp.dao.impl.OpenWeatherDaoImpl</node>
+    <node x="570.707373110265" y="1387.6522549441356">ch.coop.hocl1.weatherapp.factory.CurrentWeatherModelFactory</node>
+    <node x="510.70737311026505" y="153.15225494413573">ch.coop.hocl1.weatherapp.rest.controller.GeoController</node>
+    <node x="626.707373110265" y="302.65225494413585">ch.coop.hocl1.weatherapp.models.geocoder.GeoLocation</node>
+    <node x="-174.29262688973495" y="522.6522549441358">ch.coop.hocl1.weatherapp.configuration.WebConfig</node>
+    <node x="128.20737311026505" y="523.6522549441358">ch.coop.hocl1.weatherapp.dao.OpenWeatherDao</node>
+    <node x="909.207373110265" y="142.15225494413573">ch.coop.hocl1.weatherapp.dao.impl.GeocoderDaoImpl</node>
+    <node x="234.20737311026505" y="894.1522549441358">ch.coop.hocl1.weatherapp.models.openweather.ForecastModel</node>
+    <node x="452.20737311026505" y="950.1522549441358">ch.coop.hocl1.weatherapp.controller.RequestController</node>
+    <node x="652.707373110265" y="858.6522549441358">ch.coop.hocl1.weatherapp.factory.ForecastModelListFactory</node>
+    <node x="856.707373110265" y="1027.6522549441358">ch.coop.hocl1.weatherapp.models.openweather.CurrentWeatherModel</node>
+    <node x="459.20737311026505" y="711.6522549441357">ch.coop.hocl1.weatherapp.rest.controller.OpenWeatherController</node>
+    <node x="26.707373110265053" y="858.6522549441358">ch.coop.hocl1.weatherapp.Application</node>
+    <node x="59.70737311026505" y="333.1522549441358">ch.coop.hocl1.weatherapp.exception.handler.GlobalControllerExceptionHandler</node>
+    <node x="629.207373110265" y="-14.847745055864266">ch.coop.hocl1.weatherapp.dao.GeocoderDao</node>
+    <node x="227.70737311026505" y="90.15225494413573">ch.coop.hocl1.weatherapp.models.error.GenericErrorModel</node>
+    <node x="554.707373110265" y="1139.6522549441358">ch.coop.hocl1.weatherapp.exception.types.BackendDataInvalidException</node>
+    <node x="148.70737311026505" y="1221.1522549441356">ch.coop.hocl1.weatherapp.factory.ForecastModelFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ch.coop.hocl1.weatherapp.rest.controller.OpenWeatherController" target="ch.coop.hocl1.weatherapp.dao.OpenWeatherDao" relationship="TO_ONE">
+      <point x="-226.0" y="-50.0" />
+      <point x="154.0" y="38.0" />
+    </edge>
+    <edge source="ch.coop.hocl1.weatherapp.exception.handler.GlobalControllerExceptionHandler" target="ch.coop.hocl1.weatherapp.models.error.GenericErrorModel" relationship="CREATE">
+      <point x="-0.0" y="-50.0" />
+      <point x="-0.0" y="73.0" />
+    </edge>
+    <edge source="ch.coop.hocl1.weatherapp.dao.impl.GeocoderDaoImpl" target="ch.coop.hocl1.weatherapp.dao.GeocoderDao" relationship="REALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="1052.707373110265" y="12.152254944135734" />
+      <point x="143.5" y="0.0" />
+    </edge>
+    <edge source="ch.coop.hocl1.weatherapp.dao.impl.OpenWeatherDaoImpl" target="ch.coop.hocl1.weatherapp.dao.OpenWeatherDao" relationship="REALIZATION">
+      <point x="100.0" y="-72.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="ch.coop.hocl1.weatherapp.factory.CurrentWeatherModelFactory" target="ch.coop.hocl1.weatherapp.exception.types.BackendDataInvalidException" relationship="CREATE">
+      <point x="-0.0" y="-39.0" />
+      <point x="-0.0" y="27.0" />
+    </edge>
+    <edge source="ch.coop.hocl1.weatherapp.factory.ForecastModelFactory" target="ch.coop.hocl1.weatherapp.models.openweather.ForecastModel" relationship="CREATE">
+      <point x="-0.0" y="-50.0" />
+      <point x="-0.0" y="117.0" />
+    </edge>
+    <edge source="ch.coop.hocl1.weatherapp.rest.controller.GeoController" target="ch.coop.hocl1.weatherapp.dao.GeocoderDao" relationship="TO_ONE">
+      <point x="80.0" y="-39.0" />
+      <point x="-0.0" y="27.0" />
+    </edge>
+    <edge source="ch.coop.hocl1.weatherapp.factory.CurrentWeatherModelFactory" target="ch.coop.hocl1.weatherapp.models.openweather.CurrentWeatherModel" relationship="CREATE">
+      <point x="122.0" y="-0.0" />
+      <point x="952.707373110265" y="1426.6522549441356" />
+      <point x="-0.0" y="139.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.34935657949356613" showDependencies="true" x="1041.0312499999982" y="737.0616682509497" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

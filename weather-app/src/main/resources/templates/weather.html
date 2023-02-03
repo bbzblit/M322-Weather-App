@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Weather</title>
+    <link
+      rel="stylesheet"
+      th:href="@{/styles/weather/weather.css}"
+      href="../static/styles/weather/weather.css"
+    />
+    <link
+      rel="stylesheet"
+      th:href="@{/styles/global.css}"
+      href="../static/styles/global.css"
+    />
+    <link
+      rel="icon"
+      th:href="@{/assets/weather-dark.png}"
+      href="../static/assets/weather-dark.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      th:href="@{/assets/weather-light.png}"
+      href="../static/assets/weather-light.png"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <main>
+      <div id="app" class="app">
+        <div class="app-container">
+          <div class="button-container">
+            <a th:href="home" href="index.html">
+              <button class="button input btn-back">Back</button>
+            </a>
+            <a th:href="forecast" id="btn-forecast">
+              <button class="button input btn-forward">Forecast</button>
+            </a>
+          </div>
+          <div class="main-info">
+            <div class="location">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                id="data-marker"
+              >
+                <path
+                  d="M12,2C8.134,2,5,5.134,5,9c0,3.966,4.404,9.82,6.226,12.071c0.4,0.494,1.148,0.494,1.548,0C14.596,18.82,19,12.966,19,9 C19,5.134,15.866,2,12,2z M12,11.5c-1.381,0-2.5-1.119-2.5-2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5 C14.5,10.381,13.381,11.5,12,11.5z"
+                ></path>
+              </svg>
+              <a id="data-location-link"
+                ><h4 id="data-location" title="Google Maps"></h4
+              ></a>
+            </div>
+            <div class="weather-info">
+              <div class="temperature not-selectable">
+                <h1 id="data-temperature"></h1>
+              </div>
+              <div class="sky not-selectable">
+                <h4 id="data-sky"></h4>
+              </div>
+            </div>
+          </div>
+          <div class="general-info">
+            <div class="info-item">
+              <h3 id="data-feels-like"></h3>
+              <h4>Feels like</h4>
+            </div>
+            <div class="separator-vertical"></div>
+            <div class="info-item">
+              <h3 id="data-humidity"></h3>
+              <h4>Humidity</h4>
+            </div>
+            <div class="separator-vertical"></div>
+            <div class="info-item">
+              <h3 id="data-wind-speed"></h3>
+              <h4>Wind speed</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      type="text/javascript"
+      th:src="@{/js/weather.js}"
+      src="../static/js/weather.js"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/js/global.js}"
+      src="../static/js/global.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}
+
+.app-container {
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.input {
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 16%);
+}
+
+.button-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  font-size: 1em;
+  height: 40px;
+  background: white;
+  transition: 0.25s;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  &:hover {
+    background: #eaeaea;
+    transition: 0.25s;
+  }
+}
+
+.separator-vertical {
+  width: 1px;
+  height: 70%;
+  background-color: rgba(112, 112, 112, 0.5);
+}
+
+.separator-horizontal {
+  margin: auto;
+  height: 1px;
+  width: 80%;
+  background-color: black;
+}
+
+.not-selectable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+@media (min-width: 576px) {
+  .app-container {
+    .button-container {
+      padding: 40px 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .app-container {
+      padding: 0 5% 40px 5%;
+      max-width: 700px;
+      max-height: 800px;
+      border-radius: 40px;
+    }
+  }
+}

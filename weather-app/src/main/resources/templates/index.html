@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Search</title>
+    <link
+      rel="stylesheet"
+      th:href="@{/styles/index/index.css}"
+      href="../static/styles/index/index.css"
+    />
+    <link
+      rel="stylesheet"
+      th:href="@{/styles/global.css}"
+      href="../static/styles/global.css"
+    />
+    <link
+      rel="icon"
+      th:href="@{/assets/weather-dark.png}"
+      href="../static/assets/weather-dark.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      th:href="@{/assets/weather-light.png}"
+      href="../static/assets/weather-light.png"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <main>
+      <div id="app" class="app">
+        <div class="app-container">
+          <form action="">
+            <h3 class="form-item">Select your location</h3>
+            <div class="input-container">
+              <input
+                type="text"
+                name=""
+                class="search input form-item"
+                th:placeholder="Search"
+                placeholder="Search"
+              />
+
+              <div id="matches">
+                <!-- appended by javascript -->
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script
+      type="text/javascript"
+      th:src="@{/js/index.js}"
+      src="../static/js/index.js"
+    ></script>
+  </body>
+</html>

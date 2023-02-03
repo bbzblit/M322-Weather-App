@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Forecast</title>
+    <link
+      rel="stylesheet"
+      th:href="@{/styles/forecast/forecast.css}"
+      href="../static/styles/forecast/forecast.css"
+    />
+    <link
+      rel="stylesheet"
+      th:href="@{/styles/global.css}"
+      href="../static/styles/global.css"
+    />
+    <link
+      rel="icon"
+      th:href="@{/assets/weather-dark.png}"
+      href="../static/assets/weather-dark.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      th:href="@{/assets/weather-light.png}"
+      href="../static/assets/weather-light.png"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <main>
+      <div id="app" class="app">
+        <div class="app-container">
+          <div class="button-container">
+            <a id="btn-weather" th:href="weather"
+              ><button class="button input">Back</button></a
+            >
+          </div>
+          <h1 id="data-forecast-location"></h1>
+          <div class="forecast-container">
+            <div class="forecast-info">
+              <ul>
+                <li>
+                  <div class="flex-start">
+                    <img id="data-forecast-img-1" alt="" />
+                  </div>
+                  <div class="flex-end"><h3 id="data-forecast-1"></h3></div>
+                </li>
+                <li>
+                  <div class="flex-start">
+                    <img id="data-forecast-img-2" alt="" />
+                  </div>
+                  <div class="flex-end"><h3 id="data-forecast-2"></h3></div>
+                </li>
+                <li>
+                  <div class="flex-start">
+                    <img id="data-forecast-img-3" alt="" />
+                  </div>
+                  <div class="flex-end"><h3 id="data-forecast-3"></h3></div>
+                </li>
+                <li>
+                  <div class="flex-start">
+                    <img id="data-forecast-img-4" alt="" />
+                  </div>
+                  <div class="flex-end"><h3 id="data-forecast-4"></h3></div>
+                </li>
+                <li>
+                  <div class="flex-start">
+                    <img id="data-forecast-img-5" alt="" />
+                  </div>
+                  <div class="flex-end"><h3 id="data-forecast-5"></h3></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      type="text/javascript"
+      th:src="@{/js/forecast.js}"
+      src="../static/js/forecast.js"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/js/global.js}"
+      src="../static/js/global.js"
+    ></script>
+  </body>
+</html>
